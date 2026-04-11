@@ -1,0 +1,7 @@
+temp/
+output/
+
+test_case.txt
+
+__pycache__/
+*.pyc
