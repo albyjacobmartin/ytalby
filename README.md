@@ -107,10 +107,10 @@ cd /d "C:\Users\updatethispath\ytalby"
 - Another pop up will come, click on Browse.
 
 - select **YouTube_icon.ico** from the folder, click on OK, then Apply, then again OK.
-
+---
 ### Result:
 
-Now you will have a shortcut on Desktop with YouTube icon. when you double click on that shortcut, the terminal will open and you can follow the instruction to download the video or audio that you want.
+Now you will have a shortcut on Desktop with YouTube icon. when you double click on that shortcut, the terminal will open and you can follow the instruction to download the video or audio that you want. The final file will be saved on Desktop (for easy access). Now you are running from Desktop, and the result will also be saved in Desktop.
 
 ---
 ## How It Works
