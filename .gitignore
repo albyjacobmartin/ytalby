@@ -1,7 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Build
+build/
+dist/
+*.spec
+
+# Runtime files
 temp/
 output/
 
-test_case.txt
+# OS
+.DS_Store
+Thumbs.db
 
-__pycache__/
-*.pyc
+# VS Code
+.vscode/
