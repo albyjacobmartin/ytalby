@@ -22,13 +22,13 @@ def download_stream(url, format_id, filename):
 def download_video(url, video_format):
     ensure_temp_dir()
     filename = generate_filename("video", video_format.get("ext", "mp4"))
-    print("\n⬇️ Downloading video...")
+    print("\n⬇Downloading video...")
     download_stream(url, video_format["format_id"], filename)
     return os.path.join(TEMP_DIR, filename)
 
 def download_audio(url, audio_format):
     ensure_temp_dir()
     filename = generate_filename("audio", audio_format.get("ext", "m4a"))
-    print("⬇️ Downloading audio...")
+    print("⬇Downloading audio...")
     download_stream(url, audio_format["format_id"], filename)
     return os.path.join(TEMP_DIR, filename)

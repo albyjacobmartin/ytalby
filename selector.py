@@ -31,7 +31,7 @@ def score_video_format(f):
 def select_video(video_formats, resolution):
     candidates = [v for v in video_formats if v["height"] == resolution]
     if not candidates:
-        print("❌ No video found")
+        print("No video found")
         return None
     best = sorted(candidates, key=score_video_format, reverse=True)[0]
     print(f"\nSelected Video: {best['height']}p | {best['vcodec']}")
@@ -49,7 +49,7 @@ def score_audio_format(f):
 
 def select_audio(audio_formats):
     if not audio_formats:
-        print("❌ No audio formats found")
+        print("No audio formats found")
         return None
     best = sorted(audio_formats, key=score_audio_format, reverse=True)[0]
     print(f"Selected Audio: {best['acodec']} ({best['abr']} kbps)")

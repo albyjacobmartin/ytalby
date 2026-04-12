@@ -23,7 +23,7 @@ def main():
     print("\n==== YouTube Downloader ====\n")
     url = input("Enter URL:\n> ").strip()
     if not url:
-        print("❌ Invalid URL")
+        print("Invalid URL")
         return
     print("\nFetching info...")
     info = get_video_info(url)
@@ -36,7 +36,7 @@ def main():
     if mode in ["1", "3"]:
         resolutions = get_available_resolutions(video_formats)
         if not resolutions:
-            print("❌ No 1080p+ available")
+            print("No 1080p+ available")
             return
         res = select_resolution(resolutions)
         video = select_video(video_formats, res)
@@ -50,14 +50,14 @@ def main():
         video_path = download_video(url, video)
     if mode in ["2", "3"]:
         audio_path = download_audio(url, audio)
-    print("\n⚙️ Processing...")
+    print("\nProcessing...")
     if mode == "1":
         process_video_only(video_path, res)
     elif mode == "2":
         process_audio_only(audio_path)
     else:
         process_both(video_path, audio_path, res)
-    print("\n✅ Done!")
+    print("\nDone!")
 
 if __name__ == "__main__":
     main()

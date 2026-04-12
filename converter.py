@@ -25,7 +25,7 @@ def run_ffmpeg(cmd):
         subprocess.run(cmd, check=True)
         return True
     except:
-        print("❌ FFmpeg failed")
+        print("FFmpeg failed")
         return False
 
 def finalize(temp, final):
@@ -49,10 +49,10 @@ def process_video_only(video_path, res):
     else:
         cmd += ["-c:v", "copy"]
     cmd += ["-an", "-f", "mp4", temp]
-    print("\n⚙️ Processing video...")
+    print("\nProcessing video...")
     if run_ffmpeg(cmd):
         finalize(temp, final)
-        print("✅ Saved:", final)
+        print("Saved:", final)
     cleanup(video_path)
 
 #AUDIO
@@ -67,10 +67,10 @@ def process_audio_only(audio_path):
     else:
         cmd += ["-c:a", "copy"]
     cmd += ["-vn", "-f", "mp4", temp]
-    print("\n⚙️ Processing audio...")
+    print("\nProcessing audio...")
     if run_ffmpeg(cmd):
         finalize(temp, final)
-        print("✅ Saved:", final)
+        print("Saved:", final)
     cleanup(audio_path)
 
 #BOTH
@@ -84,8 +84,8 @@ def process_both(video_path, audio_path, res):
     cmd += ["-c:v", "copy"] if vcodec == "h264" else ["-c:v", "libx264", "-crf", "18", "-preset", "slow"]
     cmd += ["-c:a", "copy"] if acodec == "aac" else ["-c:a", "aac", "-b:a", "192k"]
     cmd += ["-f", "mp4", temp]
-    print("\n⚙️ Processing video + audio...")
+    print("\nProcessing video + audio...")
     if run_ffmpeg(cmd):
         finalize(temp, final)
-        print("✅ Saved:", final)
+        print("Saved:", final)
     cleanup(video_path, audio_path)
