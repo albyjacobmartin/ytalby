@@ -62,7 +62,7 @@ ytalby.exe
 
 ---
 
-## 📁 Output
+## Output
 
 Downloaded files will be saved in:
 
@@ -117,4 +117,4 @@ pyinstaller --onefile --name ytalby --collect-all yt_dlp main.py
 
 If you are having any issues/confusion, feel free to contact me through LinkedIn.
 
-If you like this project, please star this project.
+If you like this project, support by giving a star for this repo.
