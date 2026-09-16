@@ -40,7 +40,7 @@ def select_video(video_formats, resolution):
 #AUDIO
 def score_audio_format(f):
     score = (f.get("abr") or 0) * 2
-    acodec = f.get("acodec", "")
+    acodec = f.get("acodec") or ""
     if "mp4a" in acodec:
         score += 200
     elif "opus" in acodec:
