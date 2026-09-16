@@ -14,7 +14,7 @@ def extract_formats(info):
     video_formats = []
     audio_formats = []
     for f in formats:
-        if f.get("vcodec") != "none":
+        if f.get("vcodec") and f.get("vcodec") != "none":
             video_formats.append({
                 "format_id": f.get("format_id"),
                 "ext": f.get("ext"),
@@ -22,7 +22,7 @@ def extract_formats(info):
                 "vcodec": f.get("vcodec"),
                 "tbr": f.get("tbr"),
             })
-        if f.get("acodec") != "none" and f.get("vcodec") == "none":
+        if f.get("acodec") and f.get("acodec") != "none" and f.get("vcodec") == "none":
             audio_formats.append({
                 "format_id": f.get("format_id"),
                 "ext": f.get("ext"),
