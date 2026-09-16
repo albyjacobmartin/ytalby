@@ -1,4 +1,4 @@
 @echo off
-cd /d "C:\Users\alby4\Documents\github\ytalby"
+cd /d "C:\Users\username\folder_location\ytalby"
 python main.py
 pause
