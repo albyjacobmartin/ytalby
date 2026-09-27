@@ -15,6 +15,11 @@ def download_stream(url, format_id, filename):
     ydl_opts = {
         "format": format_id,
         "outtmpl": os.path.join(TEMP_DIR, filename),
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["web_embedded"]
+            }
+        }
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
