@@ -2,8 +2,13 @@ import yt_dlp
 
 def get_video_info(url: str):
     ydl_opts = {
-        "quiet": True,
+        "quiet": False,
         "skip_download": True,
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["web_embedded"]
+            }
+        }
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
