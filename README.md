@@ -132,8 +132,6 @@ Now you will have a shortcut on Desktop with YouTube icon. when you double click
 - FFmpeg must be installed.
 
 ---
-Latest Commit : Download client has been changed, thus 2 files has been updated. Update the code, ytdlp and python in your system.
----
 
 ## Message from Author
 If you are having any issues/confusion, feel free to contact me through LinkedIn.
